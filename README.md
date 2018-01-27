@@ -1,3 +1,3 @@
 # Lykke ElasticSearch Docker Image
 
-# Plugins:
+# Plugins: Repository-Azure
