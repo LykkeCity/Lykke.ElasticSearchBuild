@@ -1,1 +1,3 @@
-# Lykke.ElasticSearchBuild
+# Lykke ElasticSearch Docker Image
+
+# Plugins:
