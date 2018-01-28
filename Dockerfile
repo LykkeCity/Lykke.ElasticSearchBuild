@@ -1,8 +1,9 @@
 # A basic elasticsearch image
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.6.6
+FROM quay.io/pires/docker-elasticsearch-kubernetes:5.6.0
 
 MAINTAINER Giorgi Mukhigulashvili
 
-RUN /usr/share/elasticsearch/bin/elasticsearch-plugin remove x-pack --purge
+ENV NODE_NAME=node
 
-RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install repository-azure
+RUN /elasticsearch/bin/elasticsearch-plugin install repository-azure
+RUN /elasticsearch/bin/elasticsearch-plugin install https://github.com/NLPchina/elasticsearch-sql/releases/download/5.6.0.0/elasticsearch-sql-5.6.0.0.zip
